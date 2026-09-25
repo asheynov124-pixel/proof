@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#140e0b"/>
 <title>Proof</title>
 <style>
-:root{--bg:#140e0b;--ink:#f3e6d4;--muted:#9a8670;--gold:#c4a574;--crust:#c45a28;--crumb:#e8d3b0;--butter:#f3d089;--glaze:#6b3a2a;--line:#2a211c}
+:root{--bg:#140e0b;--ink:#f3e6d4;--muted:#9a8670;--gold:#c4a574;--line:#2a211c}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;overflow:hidden}
 body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
@@ -22,32 +22,34 @@ header{padding:12px 16px 8px;display:flex;justify-content:space-between;align-it
 .bar{height:6px;background:#2a211c;border-radius:99px;overflow:hidden}
 .bar>i{display:block;height:100%;width:40%;background:linear-gradient(90deg,#e8d3b0,#c4a574);transition:width .2s}
 #bench{flex:1;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 16px 0;user-select:none}
-.peel{width:100%;max-width:340px;height:46vh;min-height:240px;border-radius:28px;background:radial-gradient(ellipse at 50% 70%,#2a1c14 0%,#120c0a 70%);box-shadow:inset 0 -40px 80px #0008;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.peel{width:100%;max-width:340px;height:42vh;min-height:220px;border-radius:28px;background:radial-gradient(ellipse at 50% 70%,#2a1c14 0%,#120c0a 70%);box-shadow:inset 0 -40px 80px #0008;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .peel:active .pastry{transform:scale(.94)}
 .pastry{width:168px;height:110px;transition:transform .08s ease-out;filter:drop-shadow(0 18px 24px #000a)}
 .t0{background:linear-gradient(#f0d8b0,#d7b07a);border-radius:14px 16px 12px 12px;box-shadow:inset 0 8px 0 #fff6}
-.t1{width:150px;height:150px;background:radial-gradient(circle at 40% 35%,#e8c48a,#a35a28 70%,#5a2a12);border-radius:46% 50% 48% 44%;box-shadow:inset -18px -10px 0 #4a1c0c55, 22px -28px 0 -48px #c4a574}
+.t1{width:150px;height:150px;background:radial-gradient(circle at 40% 35%,#e8c48a,#a35a28 70%,#5a2a12);border-radius:46% 50% 48% 44%;box-shadow:inset -18px -10px 0 #4a1c0c55}
 .t2{width:190px;height:92px;background:conic-gradient(from 200deg,#f3d089,#c17a4a 40%,#f7e2b0 70%,#c45a28);border-radius:80px 20px 80px 20px;transform:rotate(-18deg)}
-.t3{width:132px;height:132px;background:radial-gradient(circle at 35% 28%,#8b3a32,#4a1614 70%);border-radius:50%;box-shadow:inset 0 -18px 24px #0006, 0 0 0 3px #c4a57444}
-.t4{width:150px;height:170px;background:linear-gradient(#f3e6d4,#e8d3b0);border-radius:8px;box-shadow:0 18px 0 #6b3a2a, 0 36px 0 #f3e6d4;position:relative}
-.name{margin-top:14px;font-family:Georgia,serif;font-size:22px}
+.t3{width:132px;height:132px;background:radial-gradient(circle at 35% 28%,#8b3a32,#4a1614 70%);border-radius:50%;box-shadow:inset 0 -18px 24px #0006,0 0 0 3px #c4a57444}
+.t4{width:150px;height:170px;background:linear-gradient(#f3e6d4,#e8d3b0);border-radius:8px;box-shadow:0 18px 0 #6b3a2a,0 36px 0 #f3e6d4}
+.name{margin-top:12px;font-family:Georgia,serif;font-size:22px}
 .hint{font-size:12px;color:var(--muted);margin-top:4px}
 .pop{position:absolute;pointer-events:none;font-weight:700;color:#f3d089;animation:up .7s ease-out forwards}
 @keyframes up{to{transform:translateY(-70px);opacity:0}}
 .steam{position:absolute;width:10px;height:10px;border-radius:50%;background:#fff3;animation:steam .6s ease-out forwards}
 @keyframes steam{to{transform:translateY(-50px) scale(2);opacity:0}}
-.next{margin:10px 16px;padding:12px 14px;border:1px solid var(--line);border-radius:16px;display:flex;justify-content:space-between;align-items:center;background:#1b1410;min-height:64px}
-.next .l{font-size:13px}
-.next .l b{display:block;font-size:15px}
-.next button,.buy{appearance:none;border:0;background:var(--gold);color:#140e0b;font-weight:700;border-radius:999px;padding:10px 14px;font-size:13px}
-.next button:disabled,.buy:disabled{opacity:.35}
-.claim{display:none;margin:0 16px 8px;padding:12px;border-radius:14px;background:#2a1c14;border:1px solid #c4a57455}
+.next,.refillrow{margin:8px 16px 0;padding:12px 14px;border:1px solid var(--line);border-radius:16px;display:flex;justify-content:space-between;align-items:center;background:#1b1410;min-height:58px;gap:8px}
+.next .l,.refillrow .l{font-size:13px}
+.next .l b,.refillrow .l b{display:block;font-size:15px}
+button.buy{appearance:none;border:0;background:var(--gold);color:#140e0b;font-weight:700;border-radius:999px;padding:10px 14px;font-size:13px;white-space:nowrap}
+button.buy:disabled{opacity:.35}
+.claim{display:none;margin:0 16px 8px;padding:12px;border-radius:14px;background:#2a1c14;border:1px solid #c4a57455;font-size:13px}
 .claim.on{display:block}
 nav{display:flex;border-top:1px solid var(--line);padding:6px 8px calc(8px + env(safe-area-inset-bottom))}
 nav button{flex:1;background:none;border:0;color:var(--muted);padding:10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 nav button.on{color:var(--ink)}
-.panel{display:none;flex:1;overflow:auto;padding:12px 16px 24px}
-.panel.on{display:block}
+.panel{display:none;flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
+.panel.on{display:flex;flex-direction:column}
+#case,#starter{padding:12px 16px 24px;display:none}
+#case.on,#starter.on{display:block}
 .card{border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;align-items:center}
 .card .meta{font-size:12px;color:var(--muted)}
 .log{font-size:12px;color:var(--muted);line-height:1.5}
@@ -63,7 +65,7 @@ nav button.on{color:var(--ink)}
   <div class="hint" id="rate">$0.40 / tap</div>
 </header>
 <div class="stock">
-  <div class="row"><span>Flour</span><span id="flourlab">40</span></div>
+  <div class="row"><span>Flour · idle bonus only</span><span id="flourlab">40</span></div>
   <div class="bar"><i id="flourbar"></i></div>
 </div>
 <div class="claim" id="claim"></div>
@@ -73,24 +75,25 @@ nav button.on{color:var(--ink)}
     <div class="pastry t0" id="pastry"></div>
   </div>
   <div class="name" id="pname">Staff of life</div>
-  <div class="hint" id="phint">Tap the loaf</div>
+  <div class="hint" id="phint">Tap the loaf — always works</div>
+  <div class="refillrow" id="refillrow"></div>
   <div class="next" id="nextbox"></div>
 </section>
 
-<section id="case" class="panel">
+<section id="case">
   <div id="shop"></div>
-  <div class="card"><div><b>Flour bag</b><div class="meta">Refill the bench</div></div><button class="buy" id="refill">$8</button></div>
 </section>
 
-<section id="starter" class="panel">
+<section id="starter">
   <div class="card">
-    <div><b>Feed the starter</b><div class="meta" id="prestigemeta">Reset the shop. Keep the jar.</div></div>
-    <button class="buy" id="prestige" disabled>Feed</button>
+    <div><b>Feed the starter</b><div class="meta" id="prestigemeta">Optional turbo. Shop resets. Multiplier stays.</div></div>
+    <button class="buy" id="prestigeBtn">Feed</button>
   </div>
-  <p class="log" id="log">Open the shop. The pastry on the peel is the level.</p>
+  <p class="log" id="log">Taps never stop. Flour only boosts idle. There is always a next buy.</p>
+  <p class="log"><a href="#" id="wipe" style="color:#c4a574">Reset this device save</a></p>
 </section>
 
-nav>
+<nav>
   <button class="on" data-tab="bench">Bench</button>
   <button data-tab="case">Case</button>
   <button data-tab="starter">Starter</button>
@@ -98,115 +101,163 @@ nav>
 </div>
 <script>
 const TIERS=[
-  {id:0,name:'Staff of life',hint:'Tap the loaf',cls:'t0',tap:0.4},
-  {id:1,name:'Country fire',hint:'Thump the boule',cls:'t1',tap:1.1},
-  {id:2,name:'Laminated',hint:'Crack the hook',cls:'t2',tap:3.4},
-  {id:3,name:'Mirror',hint:'The glaze flexes',cls:'t3',tap:8.2},
-  {id:4,name:'Window cake',hint:'The case is the flex',cls:'t4',tap:22}
+  {name:'Staff of life',hint:'Tap the loaf',cls:'t0',tap:0.4},
+  {name:'Country fire',hint:'Thump the boule',cls:'t1',tap:1.1},
+  {name:'Laminated',hint:'Crack the hook',cls:'t2',tap:3.4},
+  {name:'Mirror',hint:'The glaze flexes',cls:'t3',tap:8.2},
+  {name:'Window cake',hint:'The case is the flex',cls:'t4',tap:22}
 ];
-const UPGRADES=[
-  {id:'scraper',name:'Bench scraper',cost:12,desc:'Snappier tap +35%',kind:'mult',val:1.35},
-  {id:'lame',name:'Lame',cost:25,desc:'The loaf grows an ear',kind:'tier',val:1},
-  {id:'peel2',name:'Second peel',cost:40,desc:'Bakes every 8s',kind:'auto',val:8},
-  {id:'proofbox',name:'Proof box',cost:180,desc:'Offline cap 4h → 8h',kind:'cap',val:8},
-  {id:'butter',name:'Butter block',cost:420,desc:'Croissants land on the peel',kind:'tier',val:2},
-  {id:'case',name:'Display case',cost:900,desc:'Window sells while you tap',kind:'auto',val:4},
-  {id:'hired',name:'Hired bench',cost:2200,desc:'+1 bake / sec',kind:'auto',val:1},
-  {id:'marble',name:'Marble bench',cost:8000,desc:'Glaze dome arrives',kind:'tier',val:3},
-  {id:'brigade',name:'Brigade',cost:28000,desc:'Shop runs if flour holds',kind:'auto',val:0.35}
+const VISUAL=[
+  {id:'lame',name:'Lame',base:25,desc:'Loaf grows an ear',tier:1},
+  {id:'butter',name:'Butter block',base:420,desc:'Croissants on the peel',tier:2},
+  {id:'marble',name:'Marble bench',base:8000,desc:'Glaze dome arrives',tier:3},
+  {id:'window',name:'Window',base:55000,desc:'Wedding cake in the case',tier:4}
 ];
-const S={cash:0,flour:40,flourMax:40,owned:{},tier:0,lifetime:0,seasons:0,last:Date.now(),capH:4};
+const GEN=[
+  {id:'scraper',name:'Bench scraper',base:12,desc:'+20% tap each',kind:'tap'},
+  {id:'peel2',name:'Extra peel',base:40,desc:'Auto bake',kind:'auto',rate:0.12},
+  {id:'proofbox',name:'Proof box',base:180,desc:'Longer offline',kind:'cap'},
+  {id:'case',name:'Display slot',base:900,desc:'Sells while you tap',kind:'auto',rate:0.35},
+  {id:'hired',name:'Hired hand',base:2200,desc:'Bakes for you',kind:'auto',rate:1},
+  {id:'oven',name:'Deck oven',base:6000,desc:'Serious heat',kind:'auto',rate:3},
+  {id:'brigade',name:'Brigade line',base:28000,desc:'The shop runs itself',kind:'auto',rate:12},
+  {id:'chain',name:'Second shop',base:180000,desc:'Another address',kind:'auto',rate:50},
+  {id:'city',name:'City case',base:1.2e6,desc:'A whole district',kind:'auto',rate:220}
+];
+const S={cash:2,flour:40,flourMax:40,owned:{},tier:0,lifetime:0,seasons:0,last:Date.now(),capH:4};
 try{Object.assign(S,JSON.parse(localStorage.proof||'{}'))}catch(e){}
-const $ = id=>document.getElementById(id);
-const fmt=n=>n>=1e6?(n/1e6).toFixed(2)+'M':n>=1000?(n/1000).toFixed(2)+'k':n.toFixed(2);
-const mult=()=> (1+0.45*Math.sqrt(S.seasons)) * (S.owned.scraper?1.35:1);
-const tapVal=()=> TIERS[S.tier].tap * mult();
-const autoPerSec=()=>{
+if(!S.owned)S.owned={};
+if(typeof S.cash!=='number'||!isFinite(S.cash))S.cash=2;
+const $=id=>document.getElementById(id);
+function fmt(n){
+  const a=Math.abs(n);
+  if(a>=1e12)return (n/1e12).toFixed(2)+'T';
+  if(a>=1e9)return (n/1e9).toFixed(2)+'B';
+  if(a>=1e6)return (n/1e6).toFixed(2)+'M';
+  if(a>=1000)return (n/1000).toFixed(2)+'k';
+  return n.toFixed(2);
+}
+const nOf=id=>S.owned[id]|0;
+const costOf=(base,n)=>base*Math.pow(1.15,n);
+function seasonM(){return 1+0.45*Math.sqrt(S.seasons||0)}
+function tapM(){return seasonM()*Math.pow(1.2,nOf('scraper'))}
+function tapVal(){return TIERS[S.tier].tap*tapM()}
+function autoPerSec(){
   let r=0;
-  if(S.owned.peel2) r+=tapVal()/8;
-  if(S.owned.case) r+=tapVal()/4;
-  if(S.owned.hired) r+=tapVal();
-  if(S.owned.brigade) r+=tapVal()/0.35;
-  return r;
-};
+  GEN.filter(g=>g.kind==='auto').forEach(g=>r+=nOf(g.id)*(g.rate||0)*tapVal());
+  return r*(S.flour>0?1:0.25);
+}
 function save(){S.last=Date.now();localStorage.proof=JSON.stringify(S)}
-function setTier(t){S.tier=Math.max(S.tier,t);const T=TIERS[S.tier];$('pastry').className='pastry '+T.cls;$('pname').textContent=T.name;$('phint').textContent=T.hint}
+function applyTier(){
+  let t=0;
+  VISUAL.forEach(v=>{if(nOf(v.id))t=Math.max(t,v.tier)});
+  if((S.seasons||0)>0)t=Math.max(t,1);
+  S.tier=t;
+  const T=TIERS[t];
+  $('pastry').className='pastry '+T.cls;
+  $('pname').textContent=T.name;
+  $('phint').textContent=T.hint+' · taps always pay';
+}
+function catalog(){
+  const items=[];
+  VISUAL.forEach(v=>{
+    if(!nOf(v.id)) items.push({id:v.id,name:v.name,desc:v.desc,cost:v.base,once:true});
+  });
+  GEN.forEach(g=>{
+    const n=nOf(g.id);
+    items.push({id:g.id,name:g.name+(n?' ×'+(n+1):''),desc:g.desc+(n?' · have '+n:''),cost:costOf(g.base,n),once:false});
+  });
+  items.sort((a,b)=>a.cost-b.cost);
+  return items;
+}
 function render(){
+  applyTier();
   $('cash').textContent=fmt(S.cash);
-  $('mult').textContent=mult().toFixed(2);
-  $('rate').textContent='$'+fmt(tapVal())+' / tap';
+  $('mult').textContent=tapM().toFixed(2);
+  $('rate').textContent='$'+fmt(tapVal())+'/tap · $'+fmt(autoPerSec())+'/s';
   const pct=Math.max(0,S.flour/S.flourMax*100);
   $('flourbar').style.width=pct+'%';
-  $('flourlab').textContent=Math.ceil(S.flour)+' / '+S.flourMax;
-  setTier(S.tier);
-  const next=UPGRADES.find(u=>!S.owned[u.id]);
-  $('nextbox').innerHTML = next ? `<div class="l"><b>${next.name}</b>${next.desc}</div><button ${S.cash<next.cost?'disabled':''} onclick="buy('${next.id}')">$${fmt(next.cost)}</button>` : `<div class="l"><b>Case is full</b>Feed the starter</div>`;
-  $('shop').innerHTML=UPGRADES.map(u=>`<div class="card"><div><b>${u.name}</b><div class="meta">${u.desc}${S.owned[u.id]?' · owned':''}</div></div><button class="buy" ${S.owned[u.id]||S.cash<u.cost?'disabled':''} onclick="buy('${u.id}')">${S.owned[u.id]?'Have':'$'+fmt(u.cost)}</button></div>`).join('');
-  const ready=S.lifetime>=80 || S.tier>=3;
-  $('prestige').disabled=!ready;
-  $('prestigemeta').textContent = ready ? `Keep the jar. Next first tap $${fmt(TIERS[0].tap*(1+0.45*Math.sqrt(S.seasons+1)))}.` : 'Unlock around $80 lifetime or Mirror tier.';
+  $('flourlab').textContent=Math.ceil(S.flour)+' / '+S.flourMax+(S.flour>0?'':' · idle 25%');
+  const refillCost=S.cash>=8?8:0;
+  $('refillrow').innerHTML=`<div class="l"><b>${S.flour<=0?'Flour empty':S.flour<S.flourMax?'Top off flour':'Flour full'}</b>${S.flour<=0?'Taps still work. Idle is 25%.':'Boosts idle to 100%'}</div><button class="buy" id="refillBtn" ${S.flour>=S.flourMax?'disabled':''}>${S.flour>=S.flourMax?'Full':refillCost?'$8':'Free'}</button>`;
+  const next=catalog()[0];
+  $('nextbox').innerHTML=`<div class="l"><b>${next.name}</b>${next.desc}</div><button class="buy" ${S.cash<next.cost?'disabled':''} data-buy="${next.id}">$${fmt(next.cost)}</button>`;
+  $('shop').innerHTML=catalog().map(u=>`<div class="card"><div><b>${u.name}</b><div class="meta">${u.desc}</div></div><button class="buy" ${S.cash<u.cost?'disabled':''} data-buy="${u.id}">$${fmt(u.cost)}</button></div>`).join('');
+  const ready=(S.lifetime||0)>=200 || S.tier>=2;
+  $('prestigeBtn').disabled=!ready;
+  $('prestigemeta').textContent=ready?`Optional. Keep x${(1+0.45*Math.sqrt((S.seasons||0)+1)).toFixed(2)}. First tap ~$${fmt(TIERS[Math.min(1,S.tier)].tap*(1+0.45*Math.sqrt((S.seasons||0)+1)))}.`:'Unlock after $200 lifetime or croissants. Never required.';
 }
 function juice(x,y,text){
   const p=document.createElement('div');p.className='pop';p.textContent=text;p.style.left=x+'px';p.style.top=y+'px';$('peel').appendChild(p);setTimeout(()=>p.remove(),700);
-  if(S.tier>=1){const s=document.createElement('div');s.className='steam';s.style.left=(x+Math.random()*20)+'px';s.style.top=y+'px';$('peel').appendChild(s);setTimeout(()=>s.remove(),600)}
-}
-function bake(n,fromTap){
-  if(S.flour<=0){S.flour=0;$('phint').textContent='Flour ran out. Refill in Case.';return 0}
-  const keeper = fromTap && Math.random()<1/12;
-  const earned = n * (keeper?4:1);
-  S.cash+=earned;S.lifetime+=earned;S.flour=Math.max(0,S.flour-(fromTap?0.35:0.12));
-  return {earned,keeper};
+  const s=document.createElement('div');s.className='steam';s.style.left=(x+Math.random()*24)+'px';s.style.top=y+'px';$('peel').appendChild(s);setTimeout(()=>s.remove(),600);
 }
 function tap(e){
-  const r=bake(tapVal(),true);
-  if(!r) return;
+  const keeper=Math.random()<1/12;
+  const earned=tapVal()*(keeper?4:1);
+  S.cash+=earned;S.lifetime=(S.lifetime||0)+earned;
+  if(S.flour>0)S.flour=Math.max(0,S.flour-0.15);
   const rect=$('peel').getBoundingClientRect();
-  const x=(e.touches?e.touches[0].clientX:e.clientX)-rect.left;
-  const y=(e.touches?e.touches[0].clientY:e.clientY)-rect.top;
-  juice(x,y,(r.keeper?'✦ ':'+')+fmt(r.earned));
+  const pt=e.touches?e.touches[0]:e;
+  juice(pt.clientX-rect.left,pt.clientY-rect.top,(keeper?'✦ ':'+')+fmt(earned));
   render();save();
 }
 function buy(id){
-  const u=UPGRADES.find(x=>x.id===id);if(!u||S.owned[u.id]||S.cash<u.cost)return;
-  S.cash-=u.cost;S.owned[u.id]=1;
-  if(u.kind==='tier') setTier(u.val);
-  if(u.kind==='cap') S.capH=u.val;
+  const vis=VISUAL.find(v=>v.id===id);
+  if(vis){
+    if(nOf(id))return;
+    if(S.cash<vis.base)return;
+    S.cash-=vis.base;S.owned[id]=1;render();save();return;
+  }
+  const g=GEN.find(x=>x.id===id);if(!g)return;
+  const c=costOf(g.base,nOf(id));if(S.cash<c)return;
+  S.cash-=c;S.owned[id]=nOf(id)+1;
+  if(g.kind==='cap')S.capH=Math.min(12,4+nOf(id)*2);
   render();save();
 }
-function refill(){if(S.cash<8)return;S.cash-=8;S.flour=S.flourMax;render();save()}
+function refill(){
+  if(S.flour>=S.flourMax)return;
+  if(S.cash>=8)S.cash-=8;
+  S.flour=S.flourMax;render();save();
+}
 function prestige(){
-  if(S.lifetime<80 && S.tier<3)return;
-  S.seasons+=1;S.cash=0;S.flour=S.flourMax;S.owned={};S.tier=S.seasons>0?1:0;S.lifetime=0;S.capH=4;
-  $('log').textContent='Season '+S.seasons+'. The starter kept. First loaf already has an ear.';
+  if((S.lifetime||0)<200 && S.tier<2)return;
+  S.seasons=(S.seasons||0)+1;
+  S.cash=2;S.flour=S.flourMax;S.owned={};S.lifetime=0;S.capH=4;
+  $('log').textContent='Season '+S.seasons+'. Starter kept. Taps already hit harder.';
   render();save();
 }
 function offline(){
   const now=Date.now();const away=Math.max(0,(now-(S.last||now))/1000);
-  if(away<20)return;
-  const cap=S.capH*3600;const used=Math.min(away,cap);
-  const stocked=S.flour>0;const rate=autoPerSec();
-  const earned=rate*used*(stocked?1:0.15);
-  if(earned>0){S.cash+=earned;S.lifetime+=earned}
-  if(used>1200) S.flour=stocked?Math.max(0,S.flour-used/80):0;
-  const hrs=(used/3600).toFixed(1);
+  if(away<15)return;
+  const used=Math.min(away,(S.capH||4)*3600);
+  const earned=autoPerSec()*used;
+  if(earned>0){S.cash+=earned;S.lifetime=(S.lifetime||0)+earned}
+  if(S.flour>0)S.flour=Math.max(0,S.flour-used/90);
   $('claim').className='claim on';
-  $('claim').textContent=`While you were gone (${hrs}h): +$${fmt(earned)}. ${S.flour<=0?'Flour ran out.':TIERS[S.tier].name+' kept coming.'}`;
+  $('claim').textContent='While you were gone ('+(used/3600).toFixed(1)+'h): +$'+fmt(earned)+'. Taps were waiting.';
   S.last=now;save();render();
 }
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-buy]');if(b)buy(b.getAttribute('data-buy'));
+});
 $('peel').addEventListener('pointerdown',tap);
-$('refill').onclick=refill;
-$('prestige').onclick=prestige;
+$('refillrow').addEventListener('click',e=>{if(e.target.id==='refillBtn'||e.target.closest('#refillBtn'))refill()});
+$('prestigeBtn').onclick=prestige;
+$('wipe').onclick=e=>{e.preventDefault();localStorage.removeItem('proof');location.reload()};
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
-  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===b.dataset.tab));
+  document.querySelectorAll('#bench,#case,#starter').forEach(p=>p.classList.toggle('on',p.id===b.dataset.tab));
 });
 setInterval(()=>{
   if(document.hidden)return;
   const r=autoPerSec();
-  if(r>0 && S.flour>0){S.cash+=r;S.lifetime+=r;S.flour=Math.max(0,S.flour-0.05);render();save()}
+  if(r>0){
+    S.cash+=r;S.lifetime=(S.lifetime||0)+r;
+    if(S.flour>0)S.flour=Math.max(0,S.flour-0.04);
+    render();save();
+  }
 },1000);
 offline();render();
-window.buy=buy;
 </script>
 </body>
 </html>
